@@ -16,6 +16,12 @@ class CartView(ModelViewSet):
         user = get_user_by_token(user_token=user_token)
         return self.queryset.filter(user=user)
 
+    def create(self, request, *args, **kwargs):
+        """
+        INSERT INTO cart (status, cart_total_price, created_at) VALUES ('reques.status', request.total_price1000);
+        """
+        return super().create(request, *args, **kwargs)
+    
     # def get_serializer_class(self):
     #     if self.action == 'create':
     #         return CartCreateSerializer
