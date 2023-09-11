@@ -1,0 +1,9 @@
+{
+    "app": "cool-curie-qhyflwqsk",
+    "disks": [
+        {
+            "name": "amiri-shop",
+            "mountTo": "media"
+        }
+    ]
+}
