@@ -16,7 +16,7 @@ from .models import Order, Cart
 @admin.register(Cart)
 class UserAdminCart(admin.ModelAdmin):
     list_display = ('id', 'user', 'status', 'updated_at', 'cart_total_price')
-    list_filter = (("created_at", DateRangeFilterBuilder()),)
+    list_filter = (("created_at", DateRangeFilterBuilder()), "status")
 
 
 @admin.register(Order)
